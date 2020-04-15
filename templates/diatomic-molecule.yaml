@@ -1,6 +1,6 @@
 spec:
   templates:
-​
+
   # Create a diatomic moleucle
   - name: create-diatomic-molecule
     parent: generic-task
@@ -18,14 +18,15 @@ spec:
           data: |
             import json
             from diatomicmolecule import create_diatomic_molecule_geometry
+            from orquestra.core.utils import SCHEMA_VERSION
             geometry = create_diatomic_molecule_geometry('{{inputs.parameters.species1}}',
                                                          '{{inputs.parameters.species2}}',
                                                          {{inputs.parameters.bond-length}}) 
             
-            geometry['schema'] = "molecular_geometry"
+            geometry['schema'] = SCHEMA_VERSION + "-molecular_geometry"
             with open('molecule.json', 'w') as f:
               f.write(json.dumps(geometry))
     outputs:
       artifacts:
       - name: geometry
-        path: /app/molecule.json 
+        path: /app/molecule.json
