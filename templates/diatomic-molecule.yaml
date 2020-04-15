@@ -28,4 +28,4 @@ spec:
     outputs:
       artifacts:
       - name: geometry
-        path: /app/molecule.json
+        path: /app/molecule.json 
