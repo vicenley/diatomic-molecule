@@ -1,6 +1,6 @@
 spec:
   templates:
-​
+
   # Create a diatomic moleucle
   - name: create-diatomic-molecule
     parent: generic-task
