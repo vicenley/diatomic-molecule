@@ -1,0 +1,1 @@
+from .diatomicmolecule import *
