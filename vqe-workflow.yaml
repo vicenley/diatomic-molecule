@@ -30,7 +30,7 @@ resources:
 - name: zoopt-optimizer
   type: git
   parameters:
-    url: "git@github.com:vicenley/../qe_zoopt/eq-zoopt.git"
+    url: "git@github.com:vicenley/qe-zoopt.git"
     branch: "master"
 - name: qe-forest
   type: git
